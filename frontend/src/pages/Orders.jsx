@@ -63,7 +63,7 @@ export default function Orders() {
                     <CheckCircle size={12} /> {order.status}
                   </span>
                   <span style={{ fontSize: '1.2rem', fontWeight: 800, color: 'var(--accent-primary)' }}>
-                    ${Number(order.total_amount).toFixed(2)}
+                    ₹{Number(order.total_amount).toLocaleString('en-IN', { minimumFractionDigits: 2 })}
                   </span>
                 </div>
               </div>

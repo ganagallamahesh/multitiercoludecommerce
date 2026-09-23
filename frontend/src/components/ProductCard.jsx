@@ -31,7 +31,7 @@ export default function ProductCard({ product, onNotification }) {
 
         <div className="product-footer">
           <div>
-            <span className="product-price">${Number(product.price).toFixed(2)}</span>
+            <span className="product-price">₹{Number(product.price).toLocaleString('en-IN', { minimumFractionDigits: 2 })}</span>
             <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
               Stock: {product.stock} units
             </div>

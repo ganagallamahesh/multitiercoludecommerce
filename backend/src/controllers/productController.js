@@ -6,7 +6,7 @@ const FALLBACK_PRODUCTS = [
     id: 1,
     title: 'Cloud Tier High Performance Laptop',
     description: 'Next-gen Developer workstation with 32GB RAM, 1TB NVMe, optimized for cloud container orchestration.',
-    price: 1299.99,
+    price: 105999.00,
     stock: 25,
     category: 'Electronics',
     image_url: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800&q=80'
@@ -15,7 +15,7 @@ const FALLBACK_PRODUCTS = [
     id: 2,
     title: 'Noise-Canceling Wireless Headphones',
     description: 'Active noise reduction headphones with 30-hour battery life and multi-device connection.',
-    price: 199.50,
+    price: 15990.00,
     stock: 40,
     category: 'Electronics',
     image_url: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&q=80'
@@ -24,7 +24,7 @@ const FALLBACK_PRODUCTS = [
     id: 3,
     title: 'Ergonomic Mesh Office Chair',
     description: 'Breathable lumbar support chair engineered for long coding sessions and remote workstation comfort.',
-    price: 249.00,
+    price: 19999.00,
     stock: 15,
     category: 'Furniture',
     image_url: 'https://images.unsplash.com/photo-1580481072645-022f9a6d1261?w=800&q=80'
@@ -33,7 +33,7 @@ const FALLBACK_PRODUCTS = [
     id: 4,
     title: 'Ultra-Wide 4K Curved Monitor',
     description: '34-inch IPS display with 144Hz refresh rate, USB-C Power Delivery, and HDR 400 certification.',
-    price: 499.99,
+    price: 39999.00,
     stock: 12,
     category: 'Electronics',
     image_url: 'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800&q=80'
@@ -42,7 +42,7 @@ const FALLBACK_PRODUCTS = [
     id: 5,
     title: 'Wireless Mechanical Keyboard',
     description: 'Hot-swappable RGB mechanical keyboard with tactile switches and multi-device Bluetooth capability.',
-    price: 119.99,
+    price: 9499.00,
     stock: 30,
     category: 'Accessories',
     image_url: 'https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=800&q=80'
@@ -51,7 +51,7 @@ const FALLBACK_PRODUCTS = [
     id: 6,
     title: 'Precision Ergonomic Gaming Mouse',
     description: 'Lightweight 26,000 DPI sensor mouse with customizable side buttons and braided ultra-flex cable.',
-    price: 69.95,
+    price: 5499.00,
     stock: 50,
     category: 'Accessories',
     image_url: 'https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=800&q=80'

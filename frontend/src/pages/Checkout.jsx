@@ -9,7 +9,7 @@ export default function Checkout() {
   const { user, token } = useAuth();
   const navigate = useNavigate();
 
-  const [shippingAddress, setShippingAddress] = useState('100 Cloud Compute Way, Suite 400, San Francisco, CA');
+  const [shippingAddress, setShippingAddress] = useState('742 Cloud Avenue, Tech City, Bengaluru, KA 560001');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [orderSuccess, setOrderSuccess] = useState(null);
@@ -88,7 +88,7 @@ export default function Checkout() {
           </div>
           <div className="summary-row">
             <span>Total Paid</span>
-            <strong style={{ color: 'var(--accent-primary)', fontSize: '1.1rem' }}>${Number(orderSuccess.totalAmount).toFixed(2)}</strong>
+            <strong style={{ color: 'var(--accent-primary)', fontSize: '1.1rem' }}>₹{Number(orderSuccess.totalAmount).toLocaleString('en-IN', { minimumFractionDigits: 2 })}</strong>
           </div>
         </div>
 
@@ -146,7 +146,7 @@ export default function Checkout() {
               <ShieldCheck size={24} color="var(--success)" />
               <div>
                 <strong style={{ fontSize: '0.9rem', display: 'block' }}>Simulated Test Card Active</strong>
-                <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>VISA ending in 4242 (No actual charge)</span>
+                <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>UPI / RuPay / Cards (No actual charge)</span>
               </div>
             </div>
           </div>
@@ -157,7 +157,7 @@ export default function Checkout() {
             disabled={loading}
             style={{ padding: '0.85rem', fontSize: '1rem' }}
           >
-            {loading ? 'Processing Order via IaaS Engine...' : `Authorize & Pay $${cartTotal.toFixed(2)}`}
+            {loading ? 'Processing Order via IaaS Engine...' : `Authorize & Pay ₹${cartTotal.toLocaleString('en-IN', { minimumFractionDigits: 2 })}`}
           </button>
         </form>
 
@@ -169,14 +169,14 @@ export default function Checkout() {
                 <span style={{ color: 'var(--text-secondary)' }}>
                   {item.quantity}x {item.title}
                 </span>
-                <strong>${(item.price * item.quantity).toFixed(2)}</strong>
+                <strong>₹{(item.price * item.quantity).toLocaleString('en-IN', { minimumFractionDigits: 2 })}</strong>
               </div>
             ))}
           </div>
 
           <div className="summary-total">
             <span>Total Payable</span>
-            <span style={{ color: 'var(--accent-primary)' }}>${cartTotal.toFixed(2)}</span>
+            <span style={{ color: 'var(--accent-primary)' }}>₹{cartTotal.toLocaleString('en-IN', { minimumFractionDigits: 2 })}</span>
           </div>
         </div>
       </div>

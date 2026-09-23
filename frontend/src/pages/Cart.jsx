@@ -39,7 +39,7 @@ export default function Cart() {
               
               <div className="cart-item-info">
                 <h4 className="cart-item-title">{item.title}</h4>
-                <div className="cart-item-price">${Number(item.price).toFixed(2)} each</div>
+                <div className="cart-item-price">₹{Number(item.price).toLocaleString('en-IN', { minimumFractionDigits: 2 })} each</div>
               </div>
 
               <div className="quantity-controls">
@@ -52,8 +52,8 @@ export default function Cart() {
                 </button>
               </div>
 
-              <div style={{ fontWeight: 800, width: '90px', textAlign: 'right' }}>
-                ${(item.price * item.quantity).toFixed(2)}
+              <div style={{ fontWeight: 800, width: '110px', textAlign: 'right' }}>
+                ₹{(item.price * item.quantity).toLocaleString('en-IN', { minimumFractionDigits: 2 })}
               </div>
 
               <button onClick={() => removeFromCart(item.id)} className="btn btn-danger" style={{ padding: '0.4rem' }}>
@@ -77,7 +77,7 @@ export default function Cart() {
           
           <div className="summary-row">
             <span>Subtotal ({cart.reduce((s, i) => s + i.quantity, 0)} items)</span>
-            <span>${cartTotal.toFixed(2)}</span>
+            <span>₹{cartTotal.toLocaleString('en-IN', { minimumFractionDigits: 2 })}</span>
           </div>
           <div className="summary-row">
             <span>Cloud Delivery (PaaS Express)</span>
@@ -85,12 +85,12 @@ export default function Cart() {
           </div>
           <div className="summary-row">
             <span>Estimated Tax</span>
-            <span>$0.00</span>
+            <span>₹0.00</span>
           </div>
 
           <div className="summary-total">
             <span>Total</span>
-            <span style={{ color: 'var(--accent-primary)' }}>${cartTotal.toFixed(2)}</span>
+            <span style={{ color: 'var(--accent-primary)' }}>₹{cartTotal.toLocaleString('en-IN', { minimumFractionDigits: 2 })}</span>
           </div>
 
           <button
